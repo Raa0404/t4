@@ -67,7 +67,7 @@ export default function Phase2({ solId, userName, onBack }) {
               <li key={idx} className="border-b py-2">
                 <p><strong>Account Number:</strong> {acc.accountNumber}</p>
                 <p><strong>Borrower Name:</strong> {acc.borrowerName}</p>
-                <p><strong>NPA Date:</strong> {acc.npaDate}</p>
+                <p><strong>NPA Date:</strong> {new Date(acc.npaDate).toLocaleDateString('en-GB')}</p>
                 <p><strong>NPA Category:</strong> {acc.npaCategory}</p>
               </li>
             ))}
